@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class StringWeight {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        int weight = 0;
+        for (char ch : str.toCharArray()) {
+            weight += (int) ch; 
+        }
+
+        System.out.println("Weight of string: " + weight);
+    }
+}
