@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class RemoveDigitPalindrome {
+    public static boolean isPalindrome(String s) {
+        int l = 0, r = s.length() - 1;
+        while (l < r) {
+            if (s.charAt(l++) != s.charAt(r--)) return false;
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        String num = sc.nextLine();
+
+        boolean found = false;
+        for (int i = 0; i < num.length(); i++) {
+            String temp = num.substring(0, i) + num.substring(i + 1);
+            if (isPalindrome(temp)) {
+                System.out.println("Remove digit: " + num.charAt(i));
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) System.out.println("No single digit removal forms a palindrome");
+    }
+}
