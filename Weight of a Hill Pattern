@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class HillPatternWeight {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of levels: ");
+        int n = sc.nextInt();
+
+        int weight = 0;
+        for (int i = 1; i <= n; i++) {
+            weight += i * i; // Example: weight = sum of squares of levels
+        }
+
+        System.out.println("Weight of hill pattern: " + weight);
+    }
+}
