@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class UserIDGeneration {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first name: ");
+        String first = sc.nextLine();
+        System.out.print("Enter last name: ");
+        String last = sc.nextLine();
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        String userID = first.substring(0, 2) + last.substring(0, 2) + num;
+        System.out.println("Generated User ID: " + userID);
+    }
+}
