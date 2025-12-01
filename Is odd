@@ -1,0 +1,7 @@
+int num = 9;
+
+if (num % 2 != 0) {
+    System.out.println("YES");
+} else {
+    System.out.println("NO");
+}
