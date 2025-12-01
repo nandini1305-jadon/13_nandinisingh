@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class MostFrequentDigitArray {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
+
+        int[] freq = new int[10];
+
+        for (int num : arr) {
+            int temp = num;
+            while (temp != 0) {
+                freq[temp % 10]++;
+                temp /= 10;
+            }
+        }
+
+        int maxFreq = 0, digit = 0;
+        for (int i = 0; i < 10; i++) {
+            if (freq[i] > maxFreq) {
+                maxFreq = freq[i];
+                digit = i;
+            }
+        }
+
+        System.out.println("Most frequent digit: " + digit);
+    }
+}
