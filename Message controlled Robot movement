@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class RobotMovement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter movement commands (U/D/L/R): ");
+        String commands = sc.nextLine();
+
+        int x = 0, y = 0;
+        for (char c : commands.toCharArray()) {
+            switch (c) {
+                case 'U': y++; break;
+                case 'D': y--; break;
+                case 'L': x--; break;
+                case 'R': x++; break;
+            }
+        }
+
+        System.out.println("Final Position: (" + x + ", " + y + ")");
+    }
+}
