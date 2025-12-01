@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class SeriesNthElement {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter N: ");
+        int N = sc.nextInt();
+
+        // Example series: 1, 3, 5, 7, ...
+        int nth = 2 * N - 1;
+
+        System.out.println("Nth element: " + nth);
+    }
+}
