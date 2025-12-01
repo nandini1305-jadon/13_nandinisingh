@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class SumEvenOddChoice {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        System.out.print("Sum Even or Odd? (E/O): ");
+        char choice = sc.next().charAt(0);
+
+        int sum = 0;
+        while (num != 0) {
+            int d = num % 10;
+            if ((choice == 'E' || choice == 'e') && d % 2 == 0) sum += d;
+            else if ((choice == 'O' || choice == 'o') && d % 2 != 0) sum += d;
+            num /= 10;
+        }
+
+        System.out.println("Sum: " + sum);
+    }
+}
