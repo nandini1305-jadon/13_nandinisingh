@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class StringCode {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String str = sc.nextLine();
+
+        int code = 0;
+        for (char ch : str.toCharArray()) {
+            code += (int) ch; // Sum of ASCII values
+        }
+
+        System.out.println("String code (sum of ASCII values): " + code);
+    }
+}
