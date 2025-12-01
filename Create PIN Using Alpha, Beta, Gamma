@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class CreatePIN {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Alpha: ");
+        int alpha = sc.nextInt();
+        System.out.print("Enter Beta: ");
+        int beta = sc.nextInt();
+        System.out.print("Enter Gamma: ");
+        int gamma = sc.nextInt();
+
+        int pin = (alpha * 100 + beta * 10 + gamma) % 10000; // 4-digit PIN
+        System.out.println("Generated PIN: " + pin);
+    }
+}
