@@ -1,0 +1,10 @@
+class SecondLastDigit {
+    static int getSecondLastDigit(int num) {
+        return (num / 10) % 10;
+    }
+
+    public static void main(String[] args) {
+        int num = 4567;
+        System.out.println(getSecondLastDigit(num));
+    }
+}
