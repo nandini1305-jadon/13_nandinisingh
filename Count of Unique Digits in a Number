@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class UniqueDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        boolean[] digits = new boolean[10];
+        int count = 0;
+
+        while (num != 0) {
+            int d = num % 10;
+            if (!digits[d]) {
+                digits[d] = true;
+                count++;
+            }
+            num /= 10;
+        }
+
+        System.out.println("Unique digits: " + count);
+    }
+}
